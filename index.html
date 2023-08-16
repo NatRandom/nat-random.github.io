@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nat.Random - Monteur Vidéo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.1);
+        }
+
+        .content-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .service {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .service h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .learn-more {
+            margin-top: 10px;
+        }
+
+        .learn-more a {
+            background-color: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .learn-more a:hover {
+            transform: scale(1.1);
+        }
+
+        .social {
+            text-align: center;
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social a {
+            color: #333333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 24px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .social a:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            resize: none;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555555;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Mes services</a>
+        <a href="#contact">Me contacter</a>
+    </div>
+
+    <div class="container">
+        <div class="content-box" id="accueil">
+            <h2>Accueil</h2>
+            <p>Bienvenue sur mon site de montage vidéo. Découvrez mes services de qualité pour vos projets TikTok et YouTube.</p>
+        </div>
+
+        <div class="content-box" id="services">
+            <h2>Mes Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Montage YouTube</h3>
+                    <p>Je réalise des montages vidéo professionnels pour vos contenus YouTube.</p>
+                    <div class="learn-more">
+                        <a href="Youtube.html">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Montage TikTok</h3>
+                    <p>Optimisez vos vidéos TikTok avec des montages créatifs et percutants.</p>
+                    <div class="learn-more">
+                        <a href="Tiktok.html">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Montage Twitch</h3>
+                    <p>Améliorez la qualité de vos streams Twitch avec des montages professionnels.</p>
+                    <div class="learn-more">
+                        <a href="Twitch.html">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box" id="contact">
+            <h2>Me Contacter</h2>
+            <p>Pour discuter de vos projets vidéo et obtenir des services fiables, remplissez le formulaire ci-dessous :</p>
+            <form action="traitement_formulaire.php" method="POST" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+                <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+
+    <div class="social">
+        <a href="https://twitter.com/01_Nattan" target="_blank">Twitter</a>
+        <a href="https://www.youtube.com/channel/UC4df501PoGQNhcyG2gKIQaQ" target="_blank">YouTube</a>
+        <a href="https://www.twitch.tv/Nat_InLive" target="_blank">Twitch</a>
+    </div>
+</body>
+</html>
